@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Branded QR Code Generator – Create Custom QR Codes with Logo</title>
+<meta name="description" content="Generate free QR codes online with custom colors, logos, and high-resolution downloads. No sign-up, instant download. Perfect for menus, events, and marketing.">
+<meta name="keywords" content="free qr code generator, qr code with logo, custom qr code, qr code creator, high resolution qr code, qr code for business, qr code menu generator">
+<link rel="canonical" href="https://yourdomain.com/">
+<style>
+:root{--bg:#f6f8fc;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--primary:#2563eb;--primary-hover:#1d4ed8;--ring:rgba(37,99,235,.25);--border:#e5e7eb;--control-h:44px}
+*,:before,:after{box-sizing:border-box}
+body{font-family:Arial,sans-serif;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;background:var(--bg);color:var(--text)}
+header{padding:0;background:#fff;color:#111;text-align:center;width:100%;border-bottom:1px solid var(--border)}
+.navbar{display:flex;align-items:center;justify-content:center;gap:.75rem;padding:.7rem 1rem;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:700}
+.brand .bolt{font-size:1.05rem}
+.brand span{font-size:1.05rem;color:#2563eb}
+.page-wrapper{display:flex;width:100%;max-width:1400px;margin:0 auto;gap:1rem;padding:0 1rem}
+.side-ad{width:160px;background:#e9eff6;border-radius:12px;padding:1rem;text-align:center;height:fit-content;position:sticky;top:1rem}
+.side-ad .ad-fallback{color:#475569;font-size:.9rem}
+.side-ad .ad-fallback .ad-title{font-weight:700;margin-bottom:.5rem}
+.side-ad.collapsed{display:none}
+main{max-width:1100px;background:transparent;padding:1rem;margin:.25rem 0;border-radius:10px;width:100%;flex:1}
+.subtitle{font-size:1.05rem;color:var(--muted);margin:.25rem 0 1rem;text-align:center}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.05);padding:1rem}
+.unified-card{padding:1rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.pane{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem}
+.controls{flex:1 1 520px}
+.section-title{margin:.25rem 0 1rem;font-size:1.05rem;color:#0f172a}
+.tabbar{display:flex;gap:.5rem;background:#eef2ff;border-radius:12px;padding:.35rem;margin-bottom:.9rem;align-items:center;width:100%}
+.tab{border:none;background:transparent;padding:.5rem .9rem;border-radius:10px;font-weight:700;color:#374151;cursor:pointer;flex:1 1 0;text-align:center}
+.tab.active{background:#3b82f6;color:#fff;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+label{font-weight:700;display:block;margin-top:.6rem}
+input,select{width:100%;max-width:100%;padding:.6rem .65rem;margin-top:.3rem;border:1px solid var(--border);border-radius:10px;background:#fff;height:var(--control-h);display:block}
+input:focus,select:focus{outline:none;box-shadow:0 0 0 4px var(--ring);border-color:#bfdbfe}
+input[type=color]{padding:0;width:var(--control-h);height:var(--control-h);border-radius:10px;overflow:hidden}
+input[type=file]{height:var(--control-h);width:100%;display:block}
+.color-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.25rem}
+.color-field{display:grid;grid-template-columns:auto 1fr;gap:.5rem;align-items:center}
+.color-field input[type="text"]{max-width:140px;font-family:monospace;height:var(--control-h)}
+.preview-card{display:flex;flex-direction:column;gap:.75rem}
+.preview-box{border:2px dashed #cbd5e1;border-radius:12px;display:flex;align-items:center;justify-content:center;min-height:260px;background:linear-gradient(180deg,#f9fafb,transparent)}
+.qr-preview{margin-top:0;text-align:center}
+.qr-preview canvas{width:220px;height:220px}
+.range-row{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;margin-top:.5rem}
+.range-row span{min-width:64px;text-align:center;color:var(--muted)}
+.range-row input[type=range]{width:100%;margin:0}
+.actions{display:flex;gap:.5rem;justify-content:stretch}
+.btn{padding:.7rem 1rem;border:none;border-radius:10px;cursor:pointer;font-weight:700;height:var(--control-h)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:#1e46b9}
+.btn-ghost{background:#f3f4f6;color:#111827}
+.btn-ghost:hover{background:#e5e7eb}
+.footer{max-width:1100px;text-align:center;margin:0 auto .75rem;color:var(--muted);width:100%}
+.coffee-btn{display:inline-flex;align-items:center;gap:.5rem;background:#facc15;color:#111827;text-decoration:none;padding:.6rem .95rem;border-radius:999px;font-weight:700;box-shadow:0 6px 18px rgba(250,204,21,.35)}
+.coffee-btn:hover{background:#eab308}
+.footer p{margin:.25rem 0}
+@media(max-width:1200px){
+	.page-wrapper{flex-direction:column;max-width:1100px}
+	.side-ad{width:100%;position:static;margin-bottom:1rem}
+}
+@media(max-width:900px){
+	.split{grid-template-columns:1fr}
+	body{align-items:stretch}
+}
+@media(max-width:700px){
+	main{margin:.25rem 0;padding:.5rem}
+	.unified-card{padding:.5rem}
+	.pane{padding:.7rem}
+	.split{gap:.65rem}
+	.subtitle{font-size:.95rem;margin:.2rem 0 .5rem}
+	.preview-box{min-height:200px}
+	.actions{flex-direction:column}
+	button{width:100%;margin-top:.25rem}
+	.qr-preview canvas{max-width:100%;height:auto}
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+	<div class="navbar">
+		<div class="brand"><span class="bolt">⚡</span><span>QR Generator</span></div>
+	</div>
+</header>
+<div class="page-wrapper">
+	<div class="side-ad">
+		<div class="ad-fallback">
+			<div class="ad-title">Advertisement</div>
+			<div>Left Side Ad</div>
+		</div>
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="vertical"></ins>
+		<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+	</div>
+	<main>
+		<p class="subtitle">Create QR codes for URLs, Wi‑Fi networks, and contact cards. Fast, free, and easy to use.</p>
+		<div class="card unified-card">
+			<div class="split">
+				<div class="pane controls" aria-label="QR code options">
+					<div class="tabbar" role="tablist" aria-label="QR type">
+						<button class="tab active" role="tab" aria-selected="true" data-type="url">URL</button>
+						<button class="tab" role="tab" aria-selected="false" data-type="wifi">Wi‑Fi</button>
+						<button class="tab" role="tab" aria-selected="false" data-type="vcard">vCard</button>
+					</div>
+					<select id="qrType" class="sr-only" aria-hidden="true">
+						<option value="url" selected>URL</option>
+						<option value="wifi">Wi‑Fi</option>
+						<option value="vcard">vCard</option>
+					</select>
+					<div id="inputFields"></div>
+					<h3 class="section-title">Customize QR Code</h3>
+					<div class="color-row">
+						<div>
+							<label for="fgColor">Foreground Color</label>
+							<div class="color-field"><input type="color" id="fgColor" value="#000000"><input type="text" id="fgHex" value="#000000"></div>
+						</div>
+						<div>
+							<label for="bgColor">Background Color</label>
+							<div class="color-field"><input type="color" id="bgColor" value="#ffffff"><input type="text" id="bgHex" value="#ffffff"></div>
+						</div>
+					</div>
+					<label for="sizeRange">Size</label>
+					<div class="range-row">
+						<span id="sizeLabel">220px</span>
+						<input type="range" id="sizeRange" min="160" max="512" step="8" value="220">
+						<span>512px</span>
+					</div>
+					<label for="logoUpload">Logo (optional)</label>
+					<input type="file" id="logoUpload" accept="image/*">
+				</div>
+				<div class="pane preview-card">
+					<h3 class="section-title">QR Code Preview</h3>
+					<div class="preview-box">
+						<div class="qr-preview"><div id="qrCode" aria-label="Generated QR Code Image"></div></div>
+					</div>
+					<div class="actions">
+						<button id="downloadPNG" class="btn btn-primary" disabled>Download QR Code</button>
+						<button id="downloadSVG" class="btn btn-ghost" disabled>Download SVG</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="side-ad">
+		<div class="ad-fallback">
+			<div class="ad-title">Advertisement</div>
+			<div>Right Side Ad</div>
+		</div>
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="vertical"></ins>
+		<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+	</div>
+</div>
+<footer class="footer">
+	<a class="coffee-btn" href="https://www.buymeacoffee.com/yourname" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+	<p>© 2024 QR Generator. Made with 💗 for the community.</p>
+	<p>Free QR code generator - No registration required</p>
+</footer>
+<script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+<script>
+!function(){
+	let s=220;
+	const e=new QRCodeStyling({width:s,height:s,data:"",dotsOptions:{color:"#000000",type:"rounded"},backgroundOptions:{color:"#ffffff"}});
+	e.append(document.getElementById("qrCode"));
+	const t=document.getElementById("qrType"),n=document.getElementById("inputFields"),o=document.getElementById("fgColor"),a=document.getElementById("bgColor"),c=document.getElementById("logoUpload"),x=document.getElementById("sizeRange"),y=document.getElementById("sizeLabel"),fh=document.getElementById("fgHex"),bh=document.getElementById("bgHex"),btnP=document.getElementById("downloadPNG"),btnS=document.getElementById("downloadSVG");
+	function l(){
+		let e="";
+		"url"===t.value?e+='<label>Website URL</label><input type="text" id="dataInput" placeholder="https://example.com">':"wifi"===t.value?e+='<label>SSID</label><input type="text" id="ssid"><label>Password</label><input type="text" id="password"><label>Encryption</label><select id="encryption"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None</option></select>':"vcard"===t.value&&(e+='<label>Full Name</label><input type="text" id="fullname"><label>Phone</label><input type="text" id="phone"><label>Email</label><input type="text" id="email"><label>Company</label><input type="text" id="company"><label>Title</label><input type="text" id="title"><label>Website</label><input type="text" id="website">');
+		n.innerHTML=e
+	}
+	function d(){
+		let n="";
+		if("url"===t.value)n=document.getElementById("dataInput")?.value?.trim()||"";
+		else if("wifi"===t.value){const e=document.getElementById("ssid")?.value?.trim()||"",t=document.getElementById("password")?.value||"",o=document.getElementById("encryption")?.value||"WPA";if(e)n=`WIFI:T:${o};S:${e};P:${t};;`}
+		else if("vcard"===t.value){const e=document.getElementById("fullname")?.value?.trim()||"",t=document.getElementById("phone")?.value?.trim()||"",o=document.getElementById("email")?.value?.trim()||"",a=document.getElementById("company")?.value?.trim()||"",c=document.getElementById("title")?.value?.trim()||"",l=document.getElementById("website")?.value?.trim()||"";if(e||t||o||a||c||l)n=`BEGIN:VCARD\nVERSION:3.0\nN:${e}\nTEL:${t}\nEMAIL:${o}\nORG:${a}\nTITLE:${c}\nURL:${l}\nEND:VCARD`}
+		return n
+	}
+	function i(){e.update({data:d(),dotsOptions:{color:o.value},backgroundOptions:{color:a.value}}),u()}
+	function r(){const v=x.valueAsNumber||220;y.textContent=v+"px";s=v;e.update({width:s,height:s})}
+	function h(val){return /^#([0-9a-fA-F]{6})$/.test(val)}
+	function g(){if(h(fh.value)){o.value=fh.value;i()} }
+	function m(){if(h(bh.value)){a.value=bh.value;i()} }
+	function p(){fh.value=o.value;bh.value=a.value}
+	function u(){const hasData=Boolean(d());btnP.disabled=!hasData;btnS.disabled=!hasData}
+	function w(){document.querySelectorAll('.tab').forEach(r=>{r.classList.toggle('active',r.dataset.type===t.value);r.setAttribute('aria-selected',String(r.dataset.type===t.value))})}
+	document.querySelectorAll('.tab').forEach(r=>{r.addEventListener('click',()=>{t.value=r.dataset.type;l();i();w();})});
+	t.addEventListener("change",()=>{l(),i(),w()}),document.addEventListener("input",i),o.addEventListener("input",()=>{p();i()}),a.addEventListener("input",()=>{p();i()}),fh.addEventListener("change",g),bh.addEventListener("change",m),x.addEventListener("input",r),c.addEventListener("change",()=>{const t=c.files[0];if(t){const n=new FileReader;n.onload=o=>{e.update({image:o.target.result})},n.readAsDataURL(t)}}),btnP.addEventListener("click",()=>e.download({name:"qr",extension:"png"})),btnS.addEventListener("click",()=>e.download({name:"qr",extension:"svg"})),l(),p(),i(),r(),w();
+	function toggleSideAds(){document.querySelectorAll('.side-ad').forEach(ad=>{const ins=ad.querySelector('ins.adsbygoogle');const fb=ad.querySelector('.ad-fallback');if(!fb||!ins)return;const h=ins.offsetHeight;const has=ins.innerHTML.trim().length>0;fb.style.display=(h>30&&has)?'none':'block';});}
+	setTimeout(toggleSideAds,1200);setTimeout(toggleSideAds,4000);window.addEventListener('resize',()=>setTimeout(toggleSideAds,300));
+}();
+</script>
+</body>
+</html>
